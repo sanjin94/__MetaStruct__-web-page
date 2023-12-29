@@ -12,6 +12,17 @@ header {
     color: #fff;
     text-align: center;
     padding: 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header img {
+    width: 100%;
+    max-width: 200px; /* Set a maximum width for the logo */
+    height: auto; /* Maintain the aspect ratio of the logo */
+    margin-bottom: 10px;
 }
 
 nav ul {
@@ -24,14 +35,14 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
     padding: 15px 20px;
-    display: inline-block;
+    display: block;
 }
 
 nav ul li a:hover, nav ul li a:focus {
@@ -61,9 +72,16 @@ section {
     margin-bottom: 20px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     nav ul li {
         display: block;
-        text-align: left;
+    }
+
+    header img {
+        max-width: 150px; /* Smaller maximum width for smaller screens */
+    }
+
+    main {
+        padding: 15px;
     }
 }
